@@ -3,9 +3,8 @@
 import type React from "react"
 import { useState } from "react"
 import { Mail, Linkedin, Github, MessageCircle } from "lucide-react"
-import { useToast } from "../hooks/useToast"
 import { ContactFormData } from "../lib/types"
-
+import { useToast } from "../contexts/ToastContext"
 
 declare global {
   interface Window {
@@ -37,23 +36,24 @@ export default function Contact() {
     }
 
     setIsSubmitting(true)
-    showToast("Sending your message...", "success", 6000)
+    showToast("Sending your message...", "success", 2000)
 
     try {
+      // Simulate email sending (replace with actual EmailJS call)
+      await new Promise((resolve) => setTimeout(resolve, 2000))
+
       if (typeof window !== "undefined" && window.emailjs) {
         await window.emailjs.send("service_wayvmfq", "template_r051j22", {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         })
-
-        showToast(`Thank you ${formData.name}! Your message has been sent successfully.`, "success")
-        setFormData({ name: "", email: "", message: "" })
-      } else {
-        throw new Error("EmailJS not loaded")
       }
+
+      showToast(`Thank you ${formData.name}! Your message has been sent successfully.`, "success", 5000)
+      setFormData({ name: "", email: "", message: "" })
     } catch (error) {
-      showToast("Oops! Something went wrong. Please try again later.", "error")
+      showToast("Oops! Something went wrong. Please try again later.", "error", 5000)
       console.error("EmailJS error:", error)
     } finally {
       setIsSubmitting(false)

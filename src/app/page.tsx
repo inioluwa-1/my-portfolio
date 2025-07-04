@@ -8,12 +8,11 @@ import Skills from "./components/Skills"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Loader from "./components/Loader"
-import Toast from "./components/Toast"
 import { useScrollAnimation } from "./hooks/useScrollAnimation"
-import { useToast } from "./hooks/useToast"
+import { useToast } from "./contexts/ToastContext"
 
 export default function Home() {
-  const { toasts, showToast, removeToast } = useToast()
+  const { showToast } = useToast()
 
   useScrollAnimation()
 
@@ -54,11 +53,6 @@ export default function Home() {
         <Projects />
         <Contact />
       </main>
-
-      {/* Toast notifications */}
-      {toasts.map((toast) => (
-        <Toast key={toast.id} id={toast.id} message={toast.message} type={toast.type} onClose={removeToast} />
-      ))}
     </>
   )
 }
