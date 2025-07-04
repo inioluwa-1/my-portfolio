@@ -1,3 +1,4 @@
+import { ShoppingCart, CheckSquare, BarChart3, ExternalLink, Github } from "lucide-react"
 import { Project } from "../lib/types"
 
 const projectsData: Project[] = [
@@ -30,6 +31,19 @@ const projectsData: Project[] = [
   },
 ]
 
+const getIcon = (iconName: string) => {
+  switch (iconName) {
+    case "shopping_cart":
+      return <ShoppingCart size={64} />
+    case "task_alt":
+      return <CheckSquare size={64} />
+    case "dashboard":
+      return <BarChart3 size={64} />
+    default:
+      return <BarChart3 size={64} />
+  }
+}
+
 export default function Projects() {
   return (
     <section id="projects" className="scroll-animate">
@@ -38,11 +52,7 @@ export default function Projects() {
         <div className="projects-grid">
           {projectsData.map((project) => (
             <div key={project.id} className="project-card">
-              <div className="project-image">
-                <i className="material-icons" style={{ fontSize: "4rem" }}>
-                  {project.icon}
-                </i>
-              </div>
+              <div className="project-image">{getIcon(project.icon)}</div>
               <div className="project-content">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
@@ -55,9 +65,11 @@ export default function Projects() {
                 </div>
                 <div className="project-links">
                   <a href={project.liveDemo} className="project-link">
+                    <ExternalLink size={16} style={{ marginRight: "5px" }} />
                     Live Demo
                   </a>
                   <a href={project.github} className="project-link">
+                    <Github size={16} style={{ marginRight: "5px" }} />
                     GitHub
                   </a>
                 </div>

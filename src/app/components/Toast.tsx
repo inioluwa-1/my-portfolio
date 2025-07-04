@@ -1,5 +1,7 @@
 "use client"
 
+import { CheckCircle, X, AlertCircle } from "lucide-react"
+
 interface ToastProps {
   id: number
   message: string
@@ -8,12 +10,14 @@ interface ToastProps {
 }
 
 export default function Toast({ id, message, type, onClose }: ToastProps) {
+  const Icon = type === "success" ? CheckCircle : AlertCircle
+
   return (
     <div className={`toast ${type} show`}>
-      <i className="material-icons toast-icon">{type === "success" ? "check_circle" : "error"}</i>
+      <Icon size={20} className="toast-icon" />
       <div className="toast-message">{message}</div>
       <button className="toast-close" onClick={() => onClose(id)} aria-label="Close toast">
-        <i className="material-icons">close</i>
+        <X size={16} />
       </button>
     </div>
   )

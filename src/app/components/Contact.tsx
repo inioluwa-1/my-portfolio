@@ -2,8 +2,9 @@
 
 import type React from "react"
 import { useState } from "react"
-import { ContactFormData } from "../lib/types"
+import { Mail, Linkedin, Github, MessageCircle } from "lucide-react"
 import { useToast } from "../hooks/useToast"
+import { ContactFormData } from "../lib/types"
 
 
 declare global {
@@ -72,7 +73,7 @@ export default function Contact() {
             </p>
             <div className="social-links">
               <a href="mailto:your-email@example.com" className="social-link" title="Email">
-                <i className="material-icons">email</i>
+                <Mail size={24} />
               </a>
               <a
                 href="https://linkedin.com/in/your-linkedin-profile"
@@ -81,7 +82,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="material-icons">business</i>
+                <Linkedin size={24} />
               </a>
               <a
                 href="https://github.com/your-github-username"
@@ -90,16 +91,16 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="material-icons">code</i>
+                <Github size={24} />
               </a>
               <a
-                href="https://wa.me/+2349035062488"
+                href="https://wa.me/1234567890"
                 className="social-link"
                 title="WhatsApp"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="material-icons">chat</i>
+                <MessageCircle size={24} />
               </a>
             </div>
           </div>
