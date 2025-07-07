@@ -72,11 +72,11 @@ export default function Contact() {
               development. Feel free to reach out!
             </p>
             <div className="social-links">
-              <a href="mailto:your-email@example.com" className="social-link" title="Email">
+              <a href="mailto:ifeini048@gmail.com" className="social-link" title="Email">
                 <Mail size={24} />
               </a>
               <a
-                href="https://linkedin.com/in/your-linkedin-profile"
+                href="https://www.linkedin.com/in/inioluwa-ayanbisi-33806b350/"
                 className="social-link"
                 title="LinkedIn"
                 target="_blank"
@@ -85,7 +85,7 @@ export default function Contact() {
                 <Linkedin size={24} />
               </a>
               <a
-                href="https://github.com/your-github-username"
+                href="https://github.com/inioluwa-1"
                 className="social-link"
                 title="GitHub"
                 target="_blank"
@@ -94,7 +94,7 @@ export default function Contact() {
                 <Github size={24} />
               </a>
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/+2349035062488"
                 className="social-link"
                 title="WhatsApp"
                 target="_blank"
