@@ -21,6 +21,7 @@ export default function Home() {
     if (typeof window !== "undefined") {
       const script = document.createElement("script")
       script.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+
       script.onload = () => {
         if (window.emailjs) {
           window.emailjs.init("rW67dvm7j11LLsvJU")
