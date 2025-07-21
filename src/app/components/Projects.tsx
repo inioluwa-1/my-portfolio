@@ -8,8 +8,8 @@ const projectsData: Project[] = [
     description: "Full-stack e-commerce solution with user authentication, payment integration, and admin dashboard.",
     technologies: ["React", "Node.js", "MySQL", "Bootstrap"],
     icon: "shopping_cart",
-    liveDemo: "https://your-ecommerce-demo.vercel.app",
-    github: "https://github.com/yourusername/ecommerce-platform",
+    liveDemo: "",
+    github: "",
   },
   {
     id: 2,
@@ -17,8 +17,8 @@ const projectsData: Project[] = [
     description: "Responsive web application for project management with real-time collaboration features.",
     technologies: ["Angular", "Laravel", "Oracle", "CSS3"],
     icon: "task_alt",
-    liveDemo: "https://your-taskmanager-demo.vercel.app",
-    github: "https://github.com/yourusername/task-manager",
+    liveDemo: "",
+    github: "",
   },
   {
     id: 3,
@@ -64,17 +64,27 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="project-links">
-                  {project.liveDemo && (
+                  {project.liveDemo ? (
                     <a href={project.liveDemo} className="project-link" target="_blank" rel="noopener noreferrer">
                       <ExternalLink size={16} style={{ marginRight: "5px" }} />
                       Live Demo
                     </a>
+                  ) : (
+                    <span className="project-link disabled">
+                      <ExternalLink size={16} style={{ marginRight: "5px" }} />
+                      Live Demo Coming Soon
+                    </span>
                   )}
-                  {project.github && (
+                  {project.github ? (
                     <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
                       <Github size={16} style={{ marginRight: "5px" }} />
                       GitHub
                     </a>
+                  ) : (
+                    <span className="project-link disabled">
+                      <Github size={16} style={{ marginRight: "5px" }} />
+                      GitHub Coming Soon
+                    </span>
                   )}
                 </div>
               </div>
