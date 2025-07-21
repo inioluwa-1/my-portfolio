@@ -1,5 +1,5 @@
 import { ShoppingCart, CheckSquare, BarChart3, ExternalLink, Github } from "lucide-react"
-import { Project } from "../lib/types"
+import type { Project } from "../lib/types"
 
 const projectsData: Project[] = [
   {
@@ -8,8 +8,8 @@ const projectsData: Project[] = [
     description: "Full-stack e-commerce solution with user authentication, payment integration, and admin dashboard.",
     technologies: ["React", "Node.js", "MySQL", "Bootstrap"],
     icon: "shopping_cart",
-    liveDemo: "#",
-    github: "#",
+    liveDemo: "https://your-ecommerce-demo.vercel.app",
+    github: "https://github.com/yourusername/ecommerce-platform",
   },
   {
     id: 2,
@@ -17,17 +17,17 @@ const projectsData: Project[] = [
     description: "Responsive web application for project management with real-time collaboration features.",
     technologies: ["Angular", "Laravel", "Oracle", "CSS3"],
     icon: "task_alt",
-    liveDemo: "#",
-    github: "#",
+    liveDemo: "https://your-taskmanager-demo.vercel.app",
+    github: "https://github.com/yourusername/task-manager",
   },
   {
     id: 3,
-    title: "Portfolio Dashboard",
-    description: "Interactive dashboard with data visualization and analytics built with modern frameworks.",
-    technologies: ["Vue.js", "PHP", "JavaScript", "Bootstrap"],
+    title: "Media Uploader",
+    description: "Interactive dashboard with data visualization built with modern frameworks.",
+    technologies: ["React", "Node", "Cloudinary", "Bootstrap"],
     icon: "dashboard",
-    liveDemo: "#",
-    github: "#",
+    liveDemo: "https://image-uploadcloudinary.vercel.app/",
+    github: "https://github.com/inioluwa-1/image-upload",
   },
 ]
 
@@ -64,14 +64,18 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="project-links">
-                  <a href={project.liveDemo} className="project-link">
-                    <ExternalLink size={16} style={{ marginRight: "5px" }} />
-                    Live Demo
-                  </a>
-                  <a href={project.github} className="project-link">
-                    <Github size={16} style={{ marginRight: "5px" }} />
-                    GitHub
-                  </a>
+                  {project.liveDemo && (
+                    <a href={project.liveDemo} className="project-link" target="_blank" rel="noopener noreferrer">
+                      <ExternalLink size={16} style={{ marginRight: "5px" }} />
+                      Live Demo
+                    </a>
+                  )}
+                  {project.github && (
+                    <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
+                      <Github size={16} style={{ marginRight: "5px" }} />
+                      GitHub
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
