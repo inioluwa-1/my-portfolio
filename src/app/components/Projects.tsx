@@ -13,11 +13,11 @@ const projectsData: Project[] = [
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "Responsive web application for project management with real-time collaboration features.",
+    title: "Charity website",
+    description: "Responsive website for a charity organization with donation features and event management.",
     technologies: ["Angular", "Laravel", "Oracle", "CSS3"],
     icon: "task_alt",
-    liveDemo: "",
+    liveDemo: "https://weareacci.org/",
     github: "",
   },
   {
