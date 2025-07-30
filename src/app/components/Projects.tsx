@@ -15,7 +15,7 @@ const projectsData: Project[] = [
     id: 2,
     title: "Charity website",
     description: "Responsive website for a charity organization with donation features and event management.",
-    technologies: ["Angular", "Laravel", "Oracle", "CSS3"],
+    technologies: ["Angular", "Laravel", "Google Forms", "Bootstrap"],
     icon: "task_alt",
     liveDemo: "https://weareacci.org/",
     github: "",
