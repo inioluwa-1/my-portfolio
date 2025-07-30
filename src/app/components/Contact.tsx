@@ -72,37 +72,50 @@ export default function Contact() {
               development. Feel free to reach out!
             </p>
             <div className="social-links">
-              <a href="mailto:ifeini048@gmail.com" className="social-link" title="Email">
-                <Mail size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/inioluwa-ayanbisi-33806b350/"
-                className="social-link"
-                title="LinkedIn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href="https://github.com/inioluwa-1"
-                className="social-link"
-                title="GitHub"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href="https://wa.me/+2349035062488"
-                className="social-link"
-                title="WhatsApp"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle size={24} />
-              </a>
-            </div>
+  <div className="social-item">
+    <a href="mailto:ifeini048@gmail.com" className="social-link" title="Email">
+      <Mail size={24} />
+    </a>
+    <span>Email</span>
+  </div>
+  <div className="social-item">
+    <a
+      href="https://www.linkedin.com/in/inioluwa-ayanbisi-33806b350/"
+      className="social-link"
+      title="LinkedIn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Linkedin size={24} />
+    </a>
+    <span>LinkedIn</span>
+  </div>
+  <div className="social-item">
+    <a
+      href="https://github.com/inioluwa-1"
+      className="social-link"
+      title="GitHub"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Github size={24} />
+    </a>
+    <span>GitHub</span>
+  </div>
+  <div className="social-item">
+    <a
+      href="https://wa.me/+2349035062488"
+      className="social-link"
+      title="WhatsApp"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <MessageCircle size={24} />
+    </a>
+    <span>WhatsApp</span>
+  </div>
+</div>
+
           </div>
 
           <div className="contact-form">

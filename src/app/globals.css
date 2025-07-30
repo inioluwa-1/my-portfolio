@@ -380,11 +380,20 @@ section {
 
 .social-links {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #cccccc;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and label */
 }
 
 .social-link {
-  display: inline-block;
   padding: 15px;
   background: rgba(0, 255, 136, 0.1);
   border-radius: 50%;
@@ -403,6 +412,7 @@ section {
   color: #000000;
   transform: translateY(-5px);
 }
+
 
 .contact-form {
   background: rgba(26, 26, 26, 0.8);

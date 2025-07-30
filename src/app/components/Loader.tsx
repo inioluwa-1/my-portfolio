@@ -9,7 +9,7 @@ export default function Loader() {
     const timer = setTimeout(() => {
       setIsLoading(false)
       document.body.classList.add("loaded")
-    }, 1000)
+    }, 100)
 
     return () => clearTimeout(timer)
   }, [])
